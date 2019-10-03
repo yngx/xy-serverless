@@ -1,0 +1,21 @@
+{
+  "name": "xy-serverless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "offline": "export $(cat ./config/.env | xargs) && serverless offline start --stage $STAGE",
+    "deploy": "SLS_DEBUG=* sls deploy --stage $STAGE --region $REGION --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "2.540.0",
+    "sharp": "^0.23.1",
+    "stream": "0.0.2"
+  },
+  "devDependencies": {
+    "serverless-offline": "^5.12.0"
+  }
+}
